@@ -1,31 +1,66 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Housing Command Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="manifest" href="manifest.json">
+<title>Housing Command Center</title>
 
-  <style>
-    body { font-family: Arial; background:#0b1d3a; color:white; text-align:center; padding:20px;}
-    .btn { background:#2d8cff; padding:15px; border-radius:20px; margin:10px; display:block; text-decoration:none; color:white;}
-  </style>
+<link rel="manifest" href="manifest.json">
+
+<style>
+body {
+  margin:0;
+  font-family:Arial;
+  background:#0b1d3a;
+  color:white;
+}
+
+/* SCREENS */
+.screen {
+  display:none;
+  padding:20px;
+  text-align:center;
+}
+.active { display:block; }
+
+/* BUTTONS */
+.btn {
+  background:#2d8cff;
+  padding:15px;
+  border-radius:30px;
+  margin:12px 0;
+  display:block;
+  text-decoration:none;
+  color:white;
+  font-weight:bold;
+}
+
+/* NAV */
+.nav {
+  position:fixed;
+  bottom:0;
+  width:100%;
+  background:#001029;
+  display:flex;
+  justify-content:space-around;
+  padding:10px 0;
+}
+.nav div {
+  cursor:pointer;
+}
+</style>
 </head>
 
 <body>
 
-<h2>🏠 Housing Command Center</h2>
+<!-- 🔥 SPLASH SCREEN -->
+<div id="splash" class="screen active">
+  <h1>🚀 Sky Ventures WI</h1>
+  <p>Resource Hub • Milwaukee</p>
 
-<a class="btn" href="tel:211">📞 Call 211</a>
-<a class="btn" href="https://www.google.com/maps/search/housing+near+me">📍 Find Housing</a>
+  <a class="btn" onclick="goHome()">ENTER</a>
+</div>
 
-<p>Track leads, call, and move fast.</p>
-
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('service-worker.js');
-}
-</script>
-
-</body>
-</html>
+<!-- 🏠 HOME -->
+<div id="home" class="screen">
+  <
