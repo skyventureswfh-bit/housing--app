@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Housing Command Center</title>
+
+  <link rel="manifest" href="manifest.json">
+
+  <style>
+    body { font-family: Arial; background:#0b1d3a; color:white; text-align:center; padding:20px;}
+    .btn { background:#2d8cff; padding:15px; border-radius:20px; margin:10px; display:block; text-decoration:none; color:white;}
+  </style>
+</head>
+
+<body>
+
+<h2>🏠 Housing Command Center</h2>
+
+<a class="btn" href="tel:211">📞 Call 211</a>
+<a class="btn" href="https://www.google.com/maps/search/housing+near+me">📍 Find Housing</a>
+
+<p>Track leads, call, and move fast.</p>
+
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+</body>
+</html>
